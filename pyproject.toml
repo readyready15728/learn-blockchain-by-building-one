@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "learn-blockchain-by-building-one"
+version = "0.0.1"
+description = "Following along with Learn Blockchain by Building One"
+authors = ["Lynn Bradshaw <readyready15728@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
