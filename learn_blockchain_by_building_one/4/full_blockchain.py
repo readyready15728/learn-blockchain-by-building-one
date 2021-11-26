@@ -17,7 +17,7 @@ class Blockchain:
             'index': len(self.chain),
             'timestamp': datetime.utcnow().isoformat(),
             'transactions': self.pending_transactions,
-            'previous_hash', previous_hash,
+            'previous_hash': previous_hash,
             'nonce': format(random.getrandbits(64), 'x')
         }
 
