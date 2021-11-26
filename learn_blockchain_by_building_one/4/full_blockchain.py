@@ -1,6 +1,7 @@
 import datetime
 import hashlib
 import json
+import random
 
 class Blockchain:
     def __init__(self):
@@ -17,7 +18,7 @@ class Blockchain:
             'timestamp': datetime.utcnow().isoformat(),
             'transactions': self.pending_transactions,
             'previous_hash', previous_hash,
-            'nonce': None
+            'nonce': format(random.getrandbits(64), 'x')
         }
 
         # Get the hash of this new block and add it to the block
@@ -41,8 +42,16 @@ class Blockchain:
         # Returns the last block in the chain (if there are blocks)
         return self.chain[-1] if self.chain else None
 
-    def proof_of_work(self):
-        pass
+    @staticmethod
+    def valid_block(self):
+        return block['hash'].startswith('0000')
 
-    def valid_hash(self):
-        pass
+    def proof_of_work(self):
+        while True:
+            new_block = self.new_block()
+
+            if self.valid_block(new_block):
+                break
+
+        self.chain.append(new_block)
+        print('Found a new block: ', new_block)
