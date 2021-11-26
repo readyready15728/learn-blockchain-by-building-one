@@ -43,7 +43,7 @@ class Blockchain:
         return self.chain[-1] if self.chain else None
 
     @staticmethod
-    def valid_block(self):
+    def valid_block(block):
         return block['hash'].startswith('0000')
 
     def proof_of_work(self):
