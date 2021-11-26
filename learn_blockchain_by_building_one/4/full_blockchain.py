@@ -15,7 +15,7 @@ class Blockchain:
     def new_block(self, previous_hash=None):
         block = {
             'index': len(self.chain),
-            'timestamp': datetime.utcnow().isoformat(),
+            'timestamp': datetime.datetime.utcnow().isoformat(),
             'transactions': self.pending_transactions,
             'previous_hash': previous_hash,
             'nonce': format(random.getrandbits(64), 'x')
