@@ -29,7 +29,7 @@ class Blockchain:
         # Add the block to the chain
         self.chain.append(block)
 
-        print(f'Created block {block['index']}')
+        print(f'Created block {block[\'index\']}')
         return block
 
     @staticmethod
