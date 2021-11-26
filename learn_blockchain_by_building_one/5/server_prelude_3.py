@@ -13,6 +13,7 @@ class ConnectionPool:
         Welcome {writer.nickname}!
 
         There are {len(self.connection_pool) - 1} user(s) here besides you.
+        ===
         """)
 
         writer.write(f'{message}\n'.encode())
