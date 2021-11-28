@@ -7,6 +7,11 @@ authors = ["Lynn Bradshaw <readyready15728@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 PyNaCl = "^1.4.0"
+structlog = "^21.4.0"
+colorama = "^0.4.4"
+marshmallow = "^3.14.1"
+marshmallow-oneofschema = "^3.0.1"
+aiohttp = "^3.8.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
